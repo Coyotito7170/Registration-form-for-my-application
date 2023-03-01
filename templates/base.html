@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django App</title>
+</head>
+<body>
+<section class="navigation-section">
+    <div class="navigation-section-container d-flex justify-content-center mb-4">
+        <nav class="navigation">
+            <a href=""><button class="btn btn-info">Home</button></a>
+            <a href=""><button class="btn btn-info">Add Products</button></a>
+            <a href=""><button class="btn btn-info">View Products</button></a>
+            <a href=""><button class="btn btn-info">Register</button></a>
+            <a href=""><button class="btn btn-info">Login</button></a>
+            <a href=""><button class="btn btn-info">Logout</button></a>
+        </nav>
+    </div>
+</section>
+
+{% if messages %}
+    {% for message in messages %}
+        <p class="text-success text-center">{{ message }}</p>
+    {% endfor %}
+
+{% endif %}
+
+
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
